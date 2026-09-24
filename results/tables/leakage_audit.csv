@@ -1,0 +1,3 @@
+Split strategy,Test images sharing a patient with training,Near-duplicate pairs crossing partitions
+Patient-level (used),0,0
+Naive image-level (counterfactual),317 (68.0%),29

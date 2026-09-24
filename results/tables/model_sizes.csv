@@ -1,0 +1,5 @@
+Backbone,Total parameters,Feature map at 512 px,Trainable (head phase),Trainable (fine-tune / full)
+custom,1251489,16×16×256,-,1248993
+densenet121,7304257,16×16×1024,264705,2394625
+efficientnetb0,4382884,16×16×1280,330753,3460637
+resnet50v2,24097793,16×16×2048,528897,15479297

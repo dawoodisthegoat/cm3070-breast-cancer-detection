@@ -1,0 +1,33 @@
+{
+  "name": "M2_densenet_ft_bce_512",
+  "role": "Fine-tuned DenseNet121, binary cross-entropy",
+  "arch": "densenet121",
+  "size": 512,
+  "loss": "bce",
+  "augment": true,
+  "batch_size": 16,
+  "phases": [
+    {
+      "name": "head",
+      "trainable": "none",
+      "lr": 0.001,
+      "epochs": 8,
+      "patience": 3
+    },
+    {
+      "name": "finetune",
+      "trainable": "top",
+      "lr": 3e-05,
+      "epochs": 25,
+      "patience": 6
+    }
+  ],
+  "total_params": 7304257,
+  "train_seconds": 1901.0630395412445,
+  "epochs_run": 31,
+  "best_val_auc": 0.7519901990890503,
+  "mean_epoch_seconds": {
+    "head": 59.620743960142136,
+    "finetune": 59.28851762025253
+  }
+}

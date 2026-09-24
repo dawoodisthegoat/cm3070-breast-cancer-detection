@@ -1,0 +1,25 @@
+{
+  "name": "M1_custom_cnn_focal_512",
+  "role": "Custom CNN trained from scratch",
+  "arch": "custom",
+  "size": 512,
+  "loss": "focal",
+  "augment": true,
+  "batch_size": 16,
+  "phases": [
+    {
+      "name": "full",
+      "trainable": "all",
+      "lr": 0.001,
+      "epochs": 40,
+      "patience": 8
+    }
+  ],
+  "total_params": 1251489,
+  "train_seconds": 1035.0097379684448,
+  "epochs_run": 29,
+  "best_val_auc": 0.7191609740257263,
+  "mean_epoch_seconds": {
+    "full": 35.30598276236962
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "name": "A2_densenet_ft_focal_224",
+  "role": "Ablation: 224 px input",
+  "arch": "densenet121",
+  "size": 224,
+  "loss": "focal",
+  "augment": true,
+  "batch_size": 16,
+  "phases": [
+    {
+      "name": "head",
+      "trainable": "none",
+      "lr": 0.001,
+      "epochs": 8,
+      "patience": 3
+    },
+    {
+      "name": "finetune",
+      "trainable": "top",
+      "lr": 3e-05,
+      "epochs": 25,
+      "patience": 6
+    }
+  ],
+  "total_params": 7304257,
+  "train_seconds": 318.63374042510986,
+  "epochs_run": 17,
+  "best_val_auc": 0.6753755807876587,
+  "mean_epoch_seconds": {
+    "head": 16.24660297234853,
+    "finetune": 16.612951907244597
+  }
+}

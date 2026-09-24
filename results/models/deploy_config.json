@@ -1,0 +1,10 @@
+{
+  "model": "M3_densenet_ft_focal_512",
+  "input_size": 512,
+  "temperature": 0.5962030373321959,
+  "thresholds": {
+    "0.50": 0.5,
+    "youden": 0.4982281625270843,
+    "sens90": 0.4061805009841919
+  }
+}

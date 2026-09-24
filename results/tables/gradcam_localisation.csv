@@ -1,0 +1,10 @@
+Model,Pointing-game hit % (95% CI),Hit % (malignant only),Chance % (whole image),Chance % (within breast),Concentration (median),Energy outside breast %
+B0_densenet_frozen_bce_224,2.8 (1.5–4.5),4.7,2.4,6.4,0.83,63.7
+M1_custom_cnn_focal_512,5.7 (3.3–8.1),8.8,2.4,6.4,1.53,39.8
+M2_densenet_ft_bce_512,10.5 (7.2–14.0),19.7,2.4,6.4,0.8,62.5
+M3_densenet_ft_focal_512,11.4 (8.0–14.9),20.7,2.4,6.4,0.6,59.7
+A1_densenet_ft_focal_noaug_512,5.2 (2.7–7.9),8.8,2.4,6.4,0.61,59.9
+A2_densenet_ft_focal_224,2.6 (1.1–4.3),5.2,2.4,6.4,0.04,63.6
+A3_efficientnetb0_ft_focal_512,16.2 (12.5–20.1),25.4,2.4,6.4,1.59,48.9
+A4_resnet50v2_ft_focal_512,15.7 (12.2–19.2),26.4,2.4,6.4,1.06,57.9
+M3_densenet_ft_focal_512 (random weights),4.8 (2.9–6.9),7.3,2.4,6.4,0.0,29.9

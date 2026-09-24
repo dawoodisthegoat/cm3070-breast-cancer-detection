@@ -1,0 +1,9 @@
+ID,Backbone,Input,Loss,Augment,Batch,Phases,Role
+B0_densenet_frozen_bce_224,densenet121,224,bce,False,32,"head (lr 0.0001, ≤5 ep)",Draft baseline re-run (identical configuration)
+M1_custom_cnn_focal_512,custom,512,focal,True,16,"full (lr 0.001, ≤40 ep)",Custom CNN trained from scratch
+M2_densenet_ft_bce_512,densenet121,512,bce,True,16,"head (lr 0.001, ≤8 ep) → finetune (lr 3e-05, ≤25 ep)","Fine-tuned DenseNet121, binary cross-entropy"
+M3_densenet_ft_focal_512,densenet121,512,focal,True,16,"head (lr 0.001, ≤8 ep) → finetune (lr 3e-05, ≤25 ep)","Proposed: fine-tuned DenseNet121, focal loss"
+A1_densenet_ft_focal_noaug_512,densenet121,512,focal,False,16,"head (lr 0.001, ≤8 ep) → finetune (lr 3e-05, ≤25 ep)",Ablation: no augmentation
+A2_densenet_ft_focal_224,densenet121,224,focal,True,16,"head (lr 0.001, ≤8 ep) → finetune (lr 3e-05, ≤25 ep)",Ablation: 224 px input
+A3_efficientnetb0_ft_focal_512,efficientnetb0,512,focal,True,16,"head (lr 0.001, ≤8 ep) → finetune (lr 3e-05, ≤25 ep)",Alternative backbone: EfficientNetB0
+A4_resnet50v2_ft_focal_512,resnet50v2,512,focal,True,16,"head (lr 0.001, ≤8 ep) → finetune (lr 3e-05, ≤25 ep)",Alternative backbone: ResNet50V2

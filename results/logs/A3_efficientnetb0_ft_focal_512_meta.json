@@ -1,0 +1,33 @@
+{
+  "name": "A3_efficientnetb0_ft_focal_512",
+  "role": "Alternative backbone: EfficientNetB0",
+  "arch": "efficientnetb0",
+  "size": 512,
+  "loss": "focal",
+  "augment": true,
+  "batch_size": 16,
+  "phases": [
+    {
+      "name": "head",
+      "trainable": "none",
+      "lr": 0.001,
+      "epochs": 8,
+      "patience": 3
+    },
+    {
+      "name": "finetune",
+      "trainable": "top",
+      "lr": 3e-05,
+      "epochs": 25,
+      "patience": 6
+    }
+  ],
+  "total_params": 4382884,
+  "train_seconds": 1161.6544892787933,
+  "epochs_run": 30,
+  "best_val_auc": 0.7798926830291748,
+  "mean_epoch_seconds": {
+    "head": 32.69157028198242,
+    "finetune": 38.63339949737895
+  }
+}

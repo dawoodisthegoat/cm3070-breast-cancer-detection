@@ -1,0 +1,4 @@
+split,images,patients,malignant,malignant_%
+train,2190,1096,977,44.6
+val,455,235,205,45.1
+test,458,235,193,42.1

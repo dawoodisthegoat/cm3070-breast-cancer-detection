@@ -1,0 +1,33 @@
+{
+  "name": "M3_densenet_ft_focal_512",
+  "role": "Proposed: fine-tuned DenseNet121, focal loss",
+  "arch": "densenet121",
+  "size": 512,
+  "loss": "focal",
+  "augment": true,
+  "batch_size": 16,
+  "phases": [
+    {
+      "name": "head",
+      "trainable": "none",
+      "lr": 0.001,
+      "epochs": 8,
+      "patience": 3
+    },
+    {
+      "name": "finetune",
+      "trainable": "top",
+      "lr": 3e-05,
+      "epochs": 25,
+      "patience": 6
+    }
+  ],
+  "total_params": 7304257,
+  "train_seconds": 1984.314254283905,
+  "epochs_run": 33,
+  "best_val_auc": 0.7519707083702087,
+  "mean_epoch_seconds": {
+    "head": 55.676790833473206,
+    "finetune": 59.08959252357483
+  }
+}

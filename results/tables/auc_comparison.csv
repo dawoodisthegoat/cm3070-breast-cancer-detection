@@ -1,0 +1,8 @@
+Proposed vs,ΔAUC,95% CI,p (paired bootstrap)
+B0_densenet_frozen_bce_224,+0.051,-0.006 to +0.108,0.074
+M1_custom_cnn_focal_512,+0.077,+0.002 to +0.152,0.046
+M2_densenet_ft_bce_512,-0.018,-0.036 to +0.000,0.053
+A1_densenet_ft_focal_noaug_512,-0.039,-0.077 to -0.000,0.048
+A2_densenet_ft_focal_224,+0.089,+0.036 to +0.142,0.000
+A3_efficientnetb0_ft_focal_512,+0.019,-0.027 to +0.068,0.459
+A4_resnet50v2_ft_focal_512,-0.022,-0.061 to +0.022,0.303

@@ -1,0 +1,25 @@
+{
+  "name": "B0_densenet_frozen_bce_224",
+  "role": "Draft baseline re-run (identical configuration)",
+  "arch": "densenet121",
+  "size": 224,
+  "loss": "bce",
+  "augment": false,
+  "batch_size": 32,
+  "phases": [
+    {
+      "name": "head",
+      "trainable": "none",
+      "lr": 0.0001,
+      "epochs": 5,
+      "patience": null
+    }
+  ],
+  "total_params": 7304257,
+  "train_seconds": 100.67809772491455,
+  "epochs_run": 5,
+  "best_val_auc": 0.6788194179534912,
+  "mean_epoch_seconds": {
+    "head": 20.121335124969484
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "name": "A4_resnet50v2_ft_focal_512",
+  "role": "Alternative backbone: ResNet50V2",
+  "arch": "resnet50v2",
+  "size": 512,
+  "loss": "focal",
+  "augment": true,
+  "batch_size": 16,
+  "phases": [
+    {
+      "name": "head",
+      "trainable": "none",
+      "lr": 0.001,
+      "epochs": 8,
+      "patience": 3
+    },
+    {
+      "name": "finetune",
+      "trainable": "top",
+      "lr": 3e-05,
+      "epochs": 25,
+      "patience": 6
+    }
+  ],
+  "total_params": 24097793,
+  "train_seconds": 1429.4517931938171,
+  "epochs_run": 26,
+  "best_val_auc": 0.739209771156311,
+  "mean_epoch_seconds": {
+    "head": 54.437467247247696,
+    "finetune": 52.61238790882958
+  }
+}
